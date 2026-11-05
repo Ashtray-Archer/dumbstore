@@ -1,0 +1,3 @@
+# Explicit text conversion boundary
+
+Mandatory preflight in42010233780/42010240320 rejected concatenation involving the imported builtins.str return because the current Ithon frontend does not assign that foreign call a static result type inside a binary operator. The existing admitted Ithon idiom is a typed conversion helper: object input, explicit str result. All concatenations/comparisons now use that declared result; the browser predicates and exact content/pixel comparisons remain unchanged. The rejected authored program is retained here, no checker rule is disabled, and no unchecked Python fallback is used. Hosted browser execution remains pending.

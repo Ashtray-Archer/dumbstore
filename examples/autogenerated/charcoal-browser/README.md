@@ -1,0 +1,9 @@
+# Offline ERB charcoal acceptance
+
+The production changes are the existing Bootstrap2 override stylesheet and the previously missing stylesheet link in the retained signup demo view. Sinatra routes, app registry, Twilio/SMS/voice XML, provider calls, artwork and Bootstrap JavaScript are unchanged. Charcoal neutral roles cover navigation, raised panels, forms, menus, dialogs, code, focus and semantic states without pixel filters or new frameworks.
+
+The actual repository ERB is rendered with Ruby's standard ERB engine, including its navbar partial and empty/populated app-list fixtures. A checked Ithon program serves current and pinned preceding rendered views from separate loopback origins. Actual Chromium at phone/desktop widths and both system color schemes checks computed colors, AA ordinary text, unchanged body text/links/form names/actions, inputs and a retained modal's visual fixture, and rejects a white-root mutation. Only local requests are allowed. Screenshots and source-check receipts are retained.
+
+The representative app metadata is a fixture, not proof of live provider behavior. The legacy Sinatra/telephony backend and jQuery-driven modal interaction are NOT_RUN. The inactive signup view is inspected without creating a new production route or submitting its form. No phone call, SMS, email, login or site deployment occurs.
+
+Type sketch: checked Ithon paths, pages and boolean observations separate source/template preservation from visible colors. Ithon's actual d6e83969 mandatory frontend is bootstrapped by host Python for Playwright; no authored unchecked Python helper is added. Ruby is the repository's existing ERB rendering boundary. An Idriç-only browser/ERB test would require new bindings; none are substituted or claimed. Initial hosted execution is pending, and rejected generated attempts must be preserved before repair.
