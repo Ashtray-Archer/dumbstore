@@ -22,7 +22,7 @@ def local_requests_only(route ∈ object) → None:
 def own_surface(page ∈ object) → bool:
     return bool(page.evaluate("getComputedStyle(document.body).backgroundColor === 'rgb(33, 33, 33)' && getComputedStyle(document.body).color === 'rgb(244, 244, 244)'"))
 
-root ∈ Path ← Path(__file__).resolve().parents[3]
+root ∈ Path ← Path.cwd()
 output ∈ Path ← root.joinpath("build/charcoal")
 output.mkdir(parents=True, exist_ok=True)
 site ∈ Path ← output.joinpath("site")
@@ -41,8 +41,10 @@ baseline_handler ∈ object ← functools.partial(http.server.SimpleHTTPRequestH
 baseline_server ∈ object ← http.server.ThreadingHTTPServer(("127.0.0.1", 0), baseline_handler)
 baseline_worker ∈ object ← threading.Thread(target=baseline_server.serve_forever, daemon=True)
 baseline_worker.start()
-baseline_address ∈ str ← "http://127.0.0.1:" + str(baseline_server.server_address[1])
-address ∈ str ← "http://127.0.0.1:" + str(server.server_address[1])
+baseline_address_parts ∈ tuple[str, int] ← baseline_server.server_address
+baseline_address ∈ str ← "http://127.0.0.1:" + str(baseline_address_parts[1])
+address_parts ∈ tuple[str, int] ← server.server_address
+address ∈ str ← "http://127.0.0.1:" + str(address_parts[1])
 driver ∈ object ← sync_playwright().start()
 browser ∈ object ← driver.chromium.launch()
 try:
