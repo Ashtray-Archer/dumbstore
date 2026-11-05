@@ -1,3 +1,99 @@
-body {
-  font-family: 'Andale Mono', sans-serif;
+:root {
+  color-scheme: dark;
+  --charcoal-background: #212121;
+  --charcoal-surface: #2F2F2F;
+  --charcoal-interactive: #383838;
+  --charcoal-border: #454545;
+  --charcoal-text: #F4F4F4;
+  --charcoal-secondary: #B4B4B4;
+  --charcoal-disabled: #858585;
+  --charcoal-selection: #595959;
+  --charcoal-focus: #B4B4B4;
+  --charcoal-error: #FFB4AB;
+  --charcoal-warning: #E8CB8B;
+  --charcoal-success: #A8D5BA;
 }
+html, body { background: var(--charcoal-background); color: var(--charcoal-text); }
+body { font-family: 'Andale Mono', sans-serif; }
+a, a:hover, a:focus { color: var(--charcoal-text); text-decoration: underline; }
+.hero-unit, .well, .breadcrumb, .thumbnail, .popover, .popover-title,
+.modal, .modal-header, .modal-body, .modal-footer, .dropdown-menu,
+.navbar-inner, .navbar .nav > .active > a, .nav-tabs > .active > a,
+.nav-tabs > .active > a:hover, .nav-tabs > .active > a:focus {
+  background: var(--charcoal-surface);
+  background-image: none;
+  color: var(--charcoal-text);
+  border-color: var(--charcoal-border);
+  box-shadow: none;
+}
+.navbar .brand, .navbar .nav > li > a, .nav > li > a,
+.dropdown-menu li > a, .dropdown-menu .active > a, .close {
+  color: var(--charcoal-text);
+  text-shadow: none;
+  opacity: 1;
+}
+.nav > li > a:hover, .nav > li > a:focus, .dropdown-menu li > a:hover,
+.dropdown-menu li > a:focus, .dropdown-menu .active > a,
+.navbar .nav > li > a:hover, .navbar .nav > li > a:focus {
+  background: var(--charcoal-interactive);
+  background-image: none;
+  color: var(--charcoal-text);
+}
+button, .btn, .btn:hover, .btn:focus, .btn:active, .btn.active,
+input, select, textarea, input[type="text"], input[type="email"],
+input[type="password"], input[type="tel"] {
+  background: var(--charcoal-interactive);
+  background-image: none;
+  border-color: var(--charcoal-border);
+  color: var(--charcoal-text);
+  text-shadow: none;
+  box-shadow: none;
+}
+button:disabled, .btn.disabled, .btn[disabled], input:disabled,
+select:disabled, textarea:disabled {
+  color: var(--charcoal-disabled);
+  background: var(--charcoal-interactive);
+  opacity: 1;
+}
+input::placeholder, textarea::placeholder, .muted, small,
+.help-block, .help-inline, .breadcrumb > .active, .nav-header {
+  color: var(--charcoal-secondary);
+  text-shadow: none;
+}
+button:focus-visible, a:focus-visible, input:focus, select:focus, textarea:focus {
+  outline: 2px solid var(--charcoal-focus);
+  outline-offset: 2px;
+  box-shadow: none;
+  border-color: var(--charcoal-border);
+}
+legend, hr, .page-header, .nav-tabs, .nav-tabs > li > a,
+table th, table td, .table-bordered, .modal-header, .modal-footer,
+.dropdown-menu .divider {
+  border-color: var(--charcoal-border);
+}
+legend, label, pre, code, .control-label { color: var(--charcoal-text); }
+pre, code, kbd, .progress {
+  background: var(--charcoal-background);
+  background-image: none;
+  border-color: var(--charcoal-border);
+}
+.table-striped tbody > tr:nth-child(odd) > td,
+.table-striped tbody > tr:nth-child(odd) > th,
+.table-hover tbody tr:hover > td, .table-hover tbody tr:hover > th {
+  background: var(--charcoal-surface);
+}
+.alert, .alert-error, .alert-danger, .alert-warning, .alert-success, .alert-info {
+  background: var(--charcoal-surface);
+  border-color: var(--charcoal-border);
+  color: var(--charcoal-text);
+  text-shadow: none;
+}
+.alert-error, .alert-danger, .text-error, .control-group.error .help-inline,
+.control-group.error .help-block { color: var(--charcoal-error); }
+.alert-warning, .text-warning { color: var(--charcoal-warning); }
+.alert-success, .text-success { color: var(--charcoal-success); }
+[class^="icon-"], [class*=" icon-"] {
+  background-image: url("/bootstrap/img/glyphicons-halflings-white.png");
+}
+::selection { background: var(--charcoal-selection); color: var(--charcoal-text); }
+/* Logos, photos, animations and telephony/XML content keep their original pixels. */
